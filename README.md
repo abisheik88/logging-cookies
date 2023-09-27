@@ -56,3 +56,34 @@ await app.listen(3000);
 - To create a custom logger we have to customlogger.ts , Here we just create a custom logger file which implements LoggerService which comes from @nestjs/common.
 
 -then we can import them in providers and use it to use them as a custom logger.
+
+<h4>Cookies</h4>
+
+- to use cookies first we need to install <b>$ npm i cookie-parser
+  npm i -D @types/cookie-parser</b>
+
+- then we initialize this in main.ts file by <b>app.use(cookieParser())</b>
+
+- Now we may use in any controller
+  <code>
+  @Post('login')
+  async loginuser(
+  @Body() logindata: LoginData,
+  @Req() req: Request,
+  @Res() res: Response,
+  ) {
+  res.cookie('Login-Data', logindata.email);
+  const userdata = await this.userService.login(logindata);
+  res.send(userdata);
+  }
+  </code>
+
+  <h4>Seeding</h4>
+
+  - to use seeding we first install the dependency <b>npm i @faker-js/faker</b>
+
+  - the create a service file for seeder .
+
+  - here we just write the logic in seeder.service.ts
+
+  - just change the count as per requirement.
