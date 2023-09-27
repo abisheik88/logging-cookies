@@ -42,7 +42,7 @@ await app.listen(3000);
 
 - These properties are used for every specific occasions
 
-<p><b>Debug:</b> Normally debug is used to debug the flow of application</p>
+<p color:red><b>Debug:</b> Normally debug is used to debug the flow of application</p>
 <p><b>Warn:</b> The warn is used for non-crictical issues but it needs attention</p>
 <p><b>Error:</b> It is used for actual errors or exceptions</p>
 <p><b>Fatal:</b> The fatal is used for extremely crictical issues</p>
