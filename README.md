@@ -51,4 +51,8 @@ await app.listen(3000);
 
 <h4>Custom Logger</h4>
 
-- when we set the logger in main.ts to console. It logs every message in terminal as a normal message.
+- when we set the logger in main.ts to console. It logs every message in terminal as a very normal message.
+
+- To create a custom logger we have to customlogger.ts , Here we just create a custom logger file which implements LoggerService which comes from @nestjs/common.
+
+-then we can import them in providers and use it to use them as a custom logger.
